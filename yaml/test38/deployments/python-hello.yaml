@@ -21,16 +21,16 @@ spec:
         app: python-hello
     spec:
       containers:
-      - image: harbor.192-168-2-19.nip.io/test38/mypython:cc0ba21
+      - image: harbor.192-168-2-19.nip.io/test38/mypython:f3ec20d
         imagePullPolicy: Always
         name: python-hello
         resources: {}
         terminationMessagePath: /dev/termination-log
         terminationMessagePolicy: File
-      imagePullSecrets:
-      - name: pull-secret
       dnsPolicy: ClusterFirst
       imagePullSecret: pull-secret
+      imagePullSecrets:
+      - name: pull-secret
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
