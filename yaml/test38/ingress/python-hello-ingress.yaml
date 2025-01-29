@@ -8,9 +8,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - test38.apps.192-168-2-19.nip.io
+        - test38.192-168-2-19.nip.io
   rules:
-    - host: test38.apps.192-168-2-19.nip.io
+    - host: test38.192-168-2-19.nip.io
       http:
         paths:
           - path: /
