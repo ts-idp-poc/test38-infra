@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: python-hello-ingress
+  namespace: test38  # Match the namespace of the service
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"  # Force HTTPS
+spec:
+  tls:
+    - hosts:
+        - test38.apps.192-168-2-19.nip.io
+  rules:
+    - host: test38.apps.192-168-2-19.nip.io
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: python-hello-service  # Name of the service
+                port:
+                  number: 80  # Target port of the service
