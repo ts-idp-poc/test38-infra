@@ -6,6 +6,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "true"  # Force HTTPS
 spec:
+  ingressClass: nginx
   tls:
     - hosts:
         - test38.192-168-2-19.nip.io
