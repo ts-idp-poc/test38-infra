@@ -21,7 +21,7 @@ spec:
         app: python-hello
     spec:
       containers:
-      - image: harbor.192-168-2-19.nip.io/test38/mypython:f3ec20d
+      - image: harbor.192-168-2-19.nip.io/test38/mypython:80b352f
         imagePullPolicy: Always
         name: python-hello
         resources: {}
